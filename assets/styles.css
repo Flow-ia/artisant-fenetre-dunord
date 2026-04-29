@@ -532,7 +532,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ====== CONDENSED PRODUCT PAGE ====== */
 .p-hero {
-  padding: 130px var(--gutter) 36px;
+  padding: 104px var(--gutter) 28px;
   background: var(--cream);
 }
 .p-hero-inner {
@@ -633,7 +633,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--ink);
 }
 @media (max-width: 900px) {
-  .p-hero { padding-top: 110px; }
+  .p-hero { padding-top: 92px; }
   .p-hero-inner { grid-template-columns: 1fr; gap: 32px; }
 }
 @media (max-width: 600px) {
