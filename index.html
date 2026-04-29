@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Artisant Fenêtre du Nord | Pose fenêtres, portes, baies & portails — Lille, Tourcoing, Belgique</title>
+<meta name="description" content="Artisan local. Fenêtres PVC, aluminium, bois, portes, baies vitrées et portails sur-mesure. Devis gratuit en 24h par WhatsApp. Pose dans le Nord, Hauts-de-France et Belgique." />
+<meta name="keywords" content="fenêtre Lille, pose fenêtre Tourcoing, baie vitrée Nord, portail aluminium, devis fenêtre Belgique, artisan menuisier Hauts-de-France" />
+<link rel="canonical" href="https://artisantfenetredunord.fr/" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#0A1628" />
+<link rel="stylesheet" href="assets/styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Artisant Fenêtre du Nord",
+  "image": "https://artisantfenetredunord.fr/assets/logo.png",
+  "telephone": "+33658978288",
+  "email": "Artisantfenetrenord@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "34 place du Général de Gaulle, Bureau 3, Lille 59000",
+    "addressRegion": "Hauts-de-France",
+    "addressCountry": "FR"
+  },
+  "areaServed": ["Lille", "Tourcoing", "Roubaix", "Dunkerque", "Valenciennes", "Arras", "Belgique"],
+  "priceRange": "€€",
+  "openingHours": "Mo-Sa 08:00-19:00"
+}
+</script>
+
+<style>
+/* HERO */
+.hero-biz {
+  display: flex;
+  align-items: center;
+  padding: 110px var(--gutter) 40px;
+  background:
+    radial-gradient(800px 500px at 80% 20%, rgba(212,162,76,0.15), transparent),
+    linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-biz-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.hero-biz-text h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6.5vw, 76px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.hero-biz-text h1 em { font-style: italic; color: var(--gold-deep); }
+.hero-biz-text .lead-biz {
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+.hero-biz-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 380px;
+}
+.btn-whatsapp-big {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #25D366;
+  color: white;
+  padding: 22px 32px;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.35);
+  transition: all 0.25s ease;
+}
+.btn-whatsapp-big:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.45);
+}
+.btn-whatsapp-big svg { width: 24px; height: 24px; flex-shrink: 0; }
+.btn-whatsapp-big small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+.btn-call-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-call-secondary:hover {
+  background: var(--gold-deep);
+  color: var(--ink);
+}
+.hero-biz-trust {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.hero-biz-trust strong { color: var(--ink); font-weight: 600; }
+.hero-biz-trust .stars { color: var(--gold-deep); letter-spacing: 2px; }
+.hero-biz-image {
+  position: relative;
+  height: 540px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(10, 22, 40, 0.18);
+}
+.hero-biz-image img { width: 100%; height: 100%; object-fit: cover; }
+.hero-biz-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(255, 249, 236, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-biz-badge .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+@media (max-width: 900px) {
+  .hero-biz { padding-top: 90px; }
+  .hero-biz-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-biz-image { height: 380px; }
+}
+@media (max-width: 750px) {
+  .hero-biz-image { height: 300px; }
+  .btn-whatsapp-big { padding: 18px 24px; font-size: 15px; }
+}
+
+/* PRODUCTS GRID */
+.products-section { padding: 56px var(--gutter); background: var(--cream); }
+.products-inner { max-width: var(--max-w); margin: 0 auto; }
+.products-header { text-align: center; max-width: 600px; margin: 0 auto 32px; }
+.products-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.products-header h2 em { font-style: italic; color: var(--gold-deep); }
+.products-header p { font-size: 16px; color: var(--ink-soft); }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(10, 22, 40, 0.05);
+}
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(10, 22, 40, 0.12); }
+.product-card-image { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--paper); }
+.product-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.product-card-image.show-after img {
+  /* Show only RIGHT half of the avant/après image — the result */
+  width: 200%;
+  object-position: right center;
+  transition: transform 0.5s ease;
+}
+.product-card:hover .product-card-image.show-after img {
+  transform: scale(1.04);
+}
+.product-card-image .reveal-hint {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+.reveal-hint .arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--gold);
+  font-weight: 700;
+}
+.reveal-hint .arrow svg { transition: transform 0.3s ease; }
+.product-card:hover .reveal-hint .arrow svg { transform: translateX(4px); }
+.product-card:hover .product-card-image img { transform: scale(1.05); }
+.product-card-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 100px;
+}
+.product-card-tag.gold { background: var(--gold-deep); color: var(--ink); }
+.product-card-info { padding: 20px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+.product-card-info h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.product-card-info p { font-size: 14px; color: var(--ink-soft); line-height: 1.5; margin-bottom: 14px; flex: 1; }
+.product-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-deep);
+  letter-spacing: 0.02em;
+}
+.product-card-link svg { transition: transform 0.25s; }
+.product-card:hover .product-card-link svg { transform: translateX(4px); }
+@media (max-width: 600px) {
+  .products-section { padding: 36px var(--gutter); }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .product-card-info { padding: 14px 14px 18px; }
+  .product-card-info h3 { font-size: 17px; }
+  .product-card-info p { font-size: 12.5px; margin-bottom: 10px; }
+  .product-card-tag { font-size: 9px; padding: 5px 9px; top: 10px; left: 10px; }
+}
+
+/* REVIEWS */
+.reviews-section { padding: 56px var(--gutter); background: var(--paper); }
+.reviews-inner { max-width: var(--max-w); margin: 0 auto; }
+.reviews-header { text-align: center; margin-bottom: 28px; }
+.reviews-header .rating-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 12px 22px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.06);
+}
+.reviews-header .stars { color: var(--gold-deep); font-size: 18px; letter-spacing: 2px; }
+.reviews-header .rating-text { font-size: 14px; font-weight: 600; color: var(--ink); }
+.reviews-header .rating-count { font-size: 13px; color: var(--ink-soft); }
+.reviews-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.reviews-header h2 em { font-style: italic; color: var(--gold-deep); }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+.review-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(10, 22, 40, 0.05);
+}
+.review-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.review-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--paper);
+  border: 2px solid var(--gold);
+}
+.review-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.review-author { flex: 1; }
+.review-author strong { display: block; font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+.review-author small { font-size: 12px; color: var(--ink-soft); }
+.review-stars { color: var(--gold-deep); font-size: 14px; letter-spacing: 1.5px; margin-bottom: 12px; }
+.review-card p { font-size: 14.5px; line-height: 1.6; color: var(--ink); flex: 1; }
+.review-date {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(10, 22, 40, 0.06);
+}
+@media (max-width: 600px) {
+  .reviews-section { padding: 36px var(--gutter); }
+  .reviews-grid { grid-template-columns: 1fr; gap: 16px; }
+  .review-card { padding: 22px; }
+}
+
+/* PILIERS */
+.pillars { padding: 56px var(--gutter); background: var(--ink); color: var(--cream); }
+.pillars-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.pillar { text-align: center; padding: 24px 12px; }
+.pillar-num {
+  font-family: var(--font-display);
+  font-size: 64px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.pillar h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.pillar p { font-size: 14.5px; line-height: 1.55; color: rgba(255, 249, 236, 0.75); max-width: 280px; margin: 0 auto; }
+@media (max-width: 800px) { .pillars-inner { grid-template-columns: 1fr; gap: 30px; } }
+
+/* FINAL CTA */
+.final-cta { padding: 56px var(--gutter); background: linear-gradient(135deg, var(--cream), var(--paper)); text-align: center; }
+.final-cta-inner { max-width: 700px; margin: 0 auto; }
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.final-cta h2 em { font-style: italic; color: var(--gold-deep); }
+.final-cta p { font-size: 17px; color: var(--ink-soft); margin-bottom: 36px; line-height: 1.5; }
+.final-cta-btns {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 380px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img class="nav-brand-mark" src="assets/logo.png" alt="Artisant Fenêtre du Nord — Fenêtre sans surprise" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#produits">Produits</a></li>
+      <li><a href="pages/pvc.html">PVC</a></li>
+      <li><a href="pages/aluminium.html">Aluminium</a></li>
+      <li><a href="pages/bois.html">Bois</a></li>
+      <li><a href="pages/faq.html">FAQ</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
+    <a href="#" data-whatsapp="Bonjour, je souhaite obtenir un devis." class="nav-cta">WhatsApp <span>→</span></a>
+    <button class="nav-toggle" aria-label="Menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="#produits">Produits</a>
+  <a href="pages/pvc.html">Fenêtres PVC</a>
+  <a href="pages/aluminium.html">Fenêtres Aluminium</a>
+  <a href="pages/bois.html">Fenêtres Bois</a>
+  <a href="pages/portes-baies-portails.html">Portes & Baies</a>
+  <a href="pages/faq.html">FAQ</a>
+  <a href="pages/contact.html">Contact</a>
+  <a href="pages/contact.html" class="mobile-cta">Demander un devis gratuit</a>
+</div>
+
+<!-- HERO -->
+<section class="hero-biz">
+  <div class="hero-biz-inner">
+    <div class="hero-biz-text">
+      <h1>Vos fenêtres,<br/>posées <em>sans surprise.</em></h1>
+      <p class="lead-biz">Artisan local. Devis sous 24h. Prix bloqué. Pose soignée dans le Nord, Hauts-de-France et Belgique.</p>
+      <div class="hero-biz-cta">
+        <a href="#" data-whatsapp="Bonjour, je souhaite obtenir un devis pour mes fenêtres." class="btn-whatsapp-big">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>Discuter sur WhatsApp<small>Réponse en moins d'une heure</small></span>
+        </a>
+        <a href="tel:0658978288" class="btn-call-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>Appeler · 06 58 97 82 88</span>
+        </a>
+      </div>
+      <div class="hero-biz-trust">
+        <span class="stars">★★★★★</span>
+        <span><strong>4.9/5</strong> · 60+ chantiers · Hauts-de-France & Belgique</span>
+      </div>
+    </div>
+
+    <div class="hero-biz-image reveal">
+      <img src="assets/terrasse-baie-vitree.jpeg" alt="Baie vitrée et terrasse posées par Artisant Fenêtre du Nord" />
+      <div class="hero-biz-badge">
+        <span class="dot"></span>
+        <span>Devis gratuit · Sans engagement</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="produits" class="products-section">
+  <div class="products-inner">
+    <div class="products-header reveal">
+      <h2>Nos <em>produits.</em></h2>
+      <p>Cliquez sur un produit pour voir la transformation complète, le détail et les finitions.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <a href="pages/pvc.html" class="product-card reveal">
+        <div class="product-card-image show-after">
+          <span class="product-card-tag gold">Best-seller</span>
+          <img src="assets/produits/fenetre-pvc-avant-apres.png" alt="Fenêtre PVC — après rénovation" />
+        </div>
+        <div class="product-card-info">
+          <h3>Fenêtres PVC</h3>
+          <p>Le meilleur rapport qualité/prix. Isolation thermique et phonique exceptionnelle, durabilité 30 ans.</p>
+          <span class="product-card-link">Découvrir <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a href="pages/aluminium.html" class="product-card reveal">
+        <div class="product-card-image show-after">
+          <span class="product-card-tag">Premium</span>
+          <img src="assets/produits/fenetre-alu-avant-apres.png" alt="Fenêtre aluminium — après rénovation" />
+        </div>
+        <div class="product-card-info">
+          <h3>Fenêtres Aluminium</h3>
+          <p>Profils ultra-fins, grandes dimensions, plus de 200 RAL au choix. Pour le contemporain et le sur-mesure.</p>
+          <span class="product-card-link">Découvrir <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a href="pages/bois.html" class="product-card reveal">
+        <div class="product-card-image show-after">
+          <span class="product-card-tag">Authentique</span>
+          <img src="assets/produits/fenetre-bois-avant-apres.png" alt="Fenêtre bois — après restauration" />
+        </div>
+        <div class="product-card-info">
+          <h3>Fenêtres Bois</h3>
+          <p>Chêne, mélèze ou pin. Pour les bâtiments anciens, zones ABF et amoureux des matériaux nobles.</p>
+          <span class="product-card-link">Découvrir <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a href="pages/portes-baies-portails.html" class="product-card reveal">
+        <div class="product-card-image show-after">
+          <span class="product-card-tag">Sécurité</span>
+          <img src="assets/produits/porte-avant-apres.png" alt="Porte d'entrée — après remplacement" />
+        </div>
+        <div class="product-card-info">
+          <h3>Portes d'entrée</h3>
+          <p>Aluminium, PVC ou mixte. Serrure 5 points A2P, vitrage anti-effraction, 200+ modèles disponibles.</p>
+          <span class="product-card-link">Découvrir <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a href="pages/portes-baies-portails.html" class="product-card reveal">
+        <div class="product-card-image show-after">
+          <span class="product-card-tag gold">XXL</span>
+          <img src="assets/produits/baie-avant-apres.png" alt="Baie vitrée — après pose" />
+        </div>
+        <div class="product-card-info">
+          <h3>Baies vitrées</h3>
+          <p>Coulissantes ou à galandage. Jusqu'à 6 mètres d'ouverture. Profils alu ultra-fins, seuil PMR.</p>
+          <span class="product-card-link">Découvrir <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+      <a href="pages/portes-baies-portails.html" class="product-card reveal">
+        <div class="product-card-image show-after">
+          <span class="product-card-tag">Motorisé</span>
+          <img src="assets/produits/portail-avant-apres.png" alt="Portail — après remplacement" />
+        </div>
+        <div class="product-card-info">
+          <h3>Portails &amp; clôtures</h3>
+          <p>Aluminium thermolaqué. Battant ou coulissant, motorisé Somfy. Clôture coordonnée disponible.</p>
+          <span class="product-card-link">Découvrir <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="avis" class="reviews-section">
+  <div class="reviews-inner">
+    <div class="reviews-header reveal">
+      <div class="rating-bar">
+        <span class="stars">★★★★★</span>
+        <span class="rating-text">4.9 / 5</span>
+        <span class="rating-count">— Plus de 60 clients satisfaits</span>
+      </div>
+      <h2>Ce que disent <em>nos clients.</em></h2>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card reveal">
+        <div class="review-head">
+          <div class="review-avatar"><img src="assets/avatars/avatar-1.png" alt="Marie D." /></div>
+          <div class="review-author"><strong>Marie D.</strong><small>Lille · Maison de ville</small></div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p>Pose impeccable de 7 fenêtres PVC en deux jours. Équipe ponctuelle, propre, et le devis a été respecté au centime près. On entend plus la rue, c'est le jour et la nuit.</p>
+        <div class="review-date">Il y a 3 semaines</div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-head">
+          <div class="review-avatar"><img src="assets/avatars/avatar-2.png" alt="Stéphane L." /></div>
+          <div class="review-author"><strong>Stéphane L.</strong><small>Tourcoing · Rénovation totale</small></div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p>J'ai fait faire 3 devis. Eux étaient les plus clairs et pas les plus chers. Baie vitrée alu de 4m posée nickel, bien expliqué les choix de vitrage. Je recommande sans hésiter.</p>
+        <div class="review-date">Il y a 1 mois</div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-head">
+          <div class="review-avatar"><img src="assets/avatars/avatar-3.png" alt="Karim B." /></div>
+          <div class="review-author"><strong>Karim B.</strong><small>Roubaix · Maison familiale</small></div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p>Réponse WhatsApp en 30 min, devis le lendemain matin. Pose porte d'entrée alu + 4 fenêtres. Travail très soigné, nettoyage complet à la fin. Du sérieux.</p>
+        <div class="review-date">Il y a 2 mois</div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-head">
+          <div class="review-avatar"><img src="assets/avatars/avatar-4.png" alt="Anne C." /></div>
+          <div class="review-author"><strong>Anne C.</strong><small>Mouscron (Belgique) · Appartement</small></div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p>Ils interviennent en Belgique sans souci. Fenêtres PVC triple vitrage installées, isolation phonique au top — j'habite près d'une route passante. Très contente.</p>
+        <div class="review-date">Il y a 2 mois</div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-head">
+          <div class="review-avatar"><img src="assets/avatars/avatar-5.png" alt="Thomas R." /></div>
+          <div class="review-author"><strong>Thomas R.</strong><small>Dunkerque · Maison récente</small></div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p>Portail alu coulissant motorisé + clôture, le tout posé en 2 jours. Tarif honnête, pose carrée, motorisation Somfy qui fonctionne au poil. Merci.</p>
+        <div class="review-date">Il y a 3 mois</div>
+      </div>
+
+      <div class="review-card reveal">
+        <div class="review-head">
+          <div class="review-avatar"><img src="assets/avatars/avatar-6.png" alt="Fatima N." /></div>
+          <div class="review-author"><strong>Fatima N.</strong><small>Valenciennes · Longère rénovée</small></div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p>Restauration de fenêtres bois sur une vieille longère, rendu fidèle à l'origine, mais avec le confort moderne. Vrai savoir-faire d'artisan, on sent qu'ils aiment leur métier.</p>
+        <div class="review-date">Il y a 4 mois</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 3 PILIERS -->
+<section class="pillars">
+  <div class="pillars-inner">
+    <div class="pillar reveal">
+      <div class="pillar-num">01</div>
+      <h3>Prix bloqué</h3>
+      <p>Le devis signé, c'est le prix final. Pas de surprise, pas de supplément en cours de chantier.</p>
+    </div>
+    <div class="pillar reveal">
+      <div class="pillar-num">02</div>
+      <h3>Délais garantis</h3>
+      <p>On fixe une date, on la tient. Si on prend du retard, on vous prévient avant — pas après.</p>
+    </div>
+    <div class="pillar reveal">
+      <div class="pillar-num">03</div>
+      <h3>Chantier propre</h3>
+      <p>Bâches, aspirateur, tri des déchets, évacuation. On part comme si on n'était jamais venus.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <h2>Prêt à <em>en parler ?</em></h2>
+    <p>Envoyez vos photos par WhatsApp. Devis détaillé sous 24h, gratuit, sans engagement.</p>
+    <div class="final-cta-btns">
+      <a href="#" data-whatsapp="Bonjour, je souhaite obtenir un devis." class="btn-whatsapp-big">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Discuter sur WhatsApp<small>06 58 97 82 88</small></span>
+      </a>
+      <a href="pages/contact.html" class="btn-call-secondary">
+        <span>Voir tous les moyens de contact</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Artisant Fenêtre <em>du Nord.</em></h3>
+        <p>Artisan local. Pose de fenêtres, portes, baies vitrées et portails sur-mesure. Hauts-de-France & Belgique.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/artisant.fenetre.dunord/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/artisant.fenetre.dunord" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/></svg>
+          </a>
+          <a href="https://www.snapchat.com/add/artisantfenetre" target="_blank" rel="noopener" aria-label="Snapchat">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.166 2c2.946-.005 5.92 1.81 6.85 4.785.339 1.087.222 2.244.213 3.38-.007.736.045 1.474 0 2.21.155.044.32.058.475.105.288.06.587.157.798.376.107.268-.029.555-.236.731-.555.503-1.32.677-1.973 1.022-.355.235-.499.659-.711 1.005-.163.275-.42.502-.748.523-.461.058-.913-.097-1.376-.107-.564-.007-1.137.137-1.561.523-.443.396-.751.918-1.232 1.281-.527.388-1.182.587-1.832.6-.871.06-1.717-.27-2.422-.752-.482-.34-.791-.87-1.286-1.193-.514-.305-1.139-.385-1.722-.305-.376.058-.764.182-1.143.087-.474-.114-.711-.604-.918-1.005-.207-.356-.337-.79-.692-1.024-.532-.303-1.142-.473-1.65-.819a1.32 1.32 0 0 1-.43-.464c-.106-.272.107-.557.366-.654.346-.155.74-.155 1.085-.319.376-.144.74-.376.972-.713.087-.146.155-.304.213-.464-.585-.27-1.21-.526-1.642-1.03-.27-.318-.388-.78-.193-1.165.116-.21.347-.318.575-.358.21-.04.405.04.59.135.183.087.376.184.585.193.118 0 .184-.117.193-.222.038-.434-.058-.87-.077-1.302-.06-.957-.155-1.95.184-2.876C5.41 4.04 7.787 2.434 10.295 2.097c.621-.087 1.247-.107 1.871-.097z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="pages/pvc.html">Fenêtres PVC</a></li>
+          <li><a href="pages/aluminium.html">Fenêtres Aluminium</a></li>
+          <li><a href="pages/bois.html">Fenêtres Bois</a></li>
+          <li><a href="pages/portes-baies-portails.html">Portes & Baies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Coordonnées</h4>
+        <ul>
+          <li><a href="tel:0658978288">06 58 97 82 88</a></li>
+          <li><a href="mailto:Artisantfenetrenord@gmail.com">Artisantfenetrenord@gmail.com</a></li>
+          <li><a href="#" data-whatsapp="Bonjour">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Adresse</h4>
+        <ul>
+          <li style="opacity: 0.85;">34 place du Général de Gaulle</li>
+          <li style="opacity: 0.85;">Bureau 3</li>
+          <li style="opacity: 0.85;">Lille 59000, Hauts-de-France · France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Artisant Fenêtre du Nord — Tous droits réservés. SIRET disponible sur demande. Assurance décennale en vigueur.</p>
+      <p style="opacity:0.5;">Zones d'intervention : Lille · Tourcoing · Roubaix · Dunkerque · Valenciennes · Arras · Belgique frontalière</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" data-whatsapp="Bonjour, je souhaite un devis." aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<style>
+.wa-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: grid; place-items: center; color: white; z-index: 50; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); transition: transform 0.25s; }
+.wa-float:hover { transform: scale(1.1); }
+@media (max-width: 600px) { .wa-float { bottom: 16px; right: 16px; width: 56px; height: 56px; } }
+</style>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

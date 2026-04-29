@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact & Devis gratuit | Artisant Fenêtre du Nord — Lille, Tourcoing, Belgique</title>
+<meta name="description" content="Contactez Artisant Fenêtre du Nord. Devis gratuit en 24h pour vos fenêtres PVC, aluminium ou bois. Tél : 06 58 97 82 88 — WhatsApp ou email. Lille, Nord, Belgique." />
+<meta name="keywords" content="contact artisan fenêtre Nord, devis gratuit fenêtre Lille, demande devis menuiserie, WhatsApp fenêtre Tourcoing" />
+<link rel="canonical" href="https://artisantfenetredunord.fr/pages/contact.html" />
+<link rel="stylesheet" href="../assets/styles.css" />
+<style>
+.contact-hero {
+  position: relative;
+  padding: 130px var(--gutter) 40px;
+  overflow: hidden;
+}
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(900px 500px at 75% 20%, rgba(212, 162, 76, 0.13), transparent 60%);
+  pointer-events: none;
+}
+.contact-grid {
+  position: relative;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+}
+.contact-info h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin: 24px 0 28px;
+}
+.contact-info h1 em { font-style: italic; color: var(--gold-deep); }
+.contact-info .lead {
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.contact-channels {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  transition: all 0.25s;
+  color: var(--ink);
+}
+.channel:hover {
+  background: var(--cream-warm);
+  border-color: var(--gold);
+  transform: translateX(4px);
+}
+.channel-icon {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold);
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.channel.whatsapp .channel-icon { background: #25D366; color: white; }
+.channel-text small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.channel-text strong {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.channel-text span { display: block; font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+
+.contact-meta {
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.meta-item small {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+.meta-item p { font-size: 14px; color: var(--ink); line-height: 1.5; }
+.meta-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+.meta-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.meta-socials a:hover { color: var(--gold); }
+.meta-socials svg { flex-shrink: 0; opacity: 0.7; }
+
+/* Form */
+.contact-form-wrapper {
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 32px;
+  padding: 56px 48px;
+  position: relative;
+  overflow: hidden;
+}
+.contact-form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -30%;
+  width: 80%; height: 100%;
+  background: radial-gradient(circle, rgba(212,162,76,0.18), transparent 60%);
+  pointer-events: none;
+}
+.contact-form-wrapper > * { position: relative; }
+.contact-form-wrapper h2 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 16px 0 12px;
+}
+.contact-form-wrapper h2 em { color: var(--gold); font-style: italic; }
+.contact-form-wrapper > p { color: rgba(255, 249, 236, 0.7); font-size: 14px; margin-bottom: 36px; }
+.contact-form-wrapper .eyebrow { color: var(--gold); }
+
+.form-grid {
+  display: grid;
+  gap: 20px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.contact-form-wrapper .field label { color: var(--gold); }
+.contact-form-wrapper .field input,
+.contact-form-wrapper .field select,
+.contact-form-wrapper .field textarea {
+  background: rgba(255, 249, 236, 0.06);
+  border: 1px solid rgba(212, 162, 76, 0.2);
+  color: var(--cream);
+}
+.contact-form-wrapper .field input::placeholder,
+.contact-form-wrapper .field textarea::placeholder {
+  color: rgba(255, 249, 236, 0.35);
+}
+.contact-form-wrapper .field input:focus,
+.contact-form-wrapper .field select:focus,
+.contact-form-wrapper .field textarea:focus {
+  background: rgba(255, 249, 236, 0.12);
+  border-color: var(--gold);
+}
+.form-submit {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.form-submit button.btn-primary {
+  background: var(--gold);
+  color: var(--ink);
+  cursor: pointer;
+}
+.form-submit button.btn-primary::before { background: var(--cream); }
+.form-submit button.btn-primary:hover span,
+.form-submit button.btn-primary:hover svg { color: var(--ink); }
+.form-submit .btn-ghost {
+  color: var(--cream);
+  border-color: rgba(255, 249, 236, 0.3);
+  cursor: pointer;
+  background: none;
+  font-family: var(--font-body);
+}
+.form-submit .btn-ghost:hover { background: var(--cream); color: var(--ink); }
+.form-note {
+  font-size: 12px;
+  color: rgba(255, 249, 236, 0.5);
+  margin-top: 16px;
+}
+
+#formSuccess {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(37, 211, 102, 0.15);
+  border: 1px solid #25D366;
+  border-radius: 12px;
+  color: #25D366;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+  .contact-form-wrapper { padding: 40px 28px; }
+}
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .contact-meta { grid-template-columns: 1fr; }
+  .contact-hero { padding: 100px var(--gutter) 30px; }
+}
+
+/* Lien vers la FAQ */
+.contact-faq-link {
+  padding: 36px var(--gutter) 56px;
+  background: var(--paper);
+}
+.contact-faq-link-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.contact-faq-link-inner .eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact-faq-link-inner h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.contact-faq-link-inner h3 em {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.contact-faq-link-inner p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  max-width: 560px;
+  line-height: 1.5;
+}
+.contact-faq-link-inner .btn-ghost {
+  flex-shrink: 0;
+}
+@media (max-width: 800px) {
+  .contact-faq-link-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px 24px;
+  }
+}
+
+.wa-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: grid; place-items: center; color: white; z-index: 50; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); transition: transform 0.25s; }
+.wa-float:hover { transform: scale(1.1); }
+@media (max-width: 600px) { .wa-float { bottom: 16px; right: 16px; width: 56px; height: 56px; } }
+</style>
+<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+<link rel="manifest" href="../manifest.json" />
+<meta name="theme-color" content="#0A1628" />
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <img class="nav-brand-mark" src="../assets/logo.png" alt="Artisant Fenêtre du Nord — Fenêtre sans surprise" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#produits">Produits</a></li>
+      <li><a href="pvc.html">PVC</a></li>
+      <li><a href="aluminium.html">Aluminium</a></li>
+      <li><a href="bois.html">Bois</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html" style="color: var(--gold-deep);">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Devis gratuit <span>→</span></a>
+    <button class="nav-toggle" aria-label="Menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="../index.html">Accueil</a>
+  <a href="pvc.html">Fenêtres PVC</a>
+  <a href="aluminium.html">Fenêtres Aluminium</a>
+  <a href="bois.html">Fenêtres Bois</a>
+  <a href="portes-baies-portails.html">Portes & Baies</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="mobile-cta">Demander un devis gratuit</a>
+</div>
+
+<section class="contact-hero">
+  <div class="contact-grid">
+    <!-- Info column -->
+    <div class="contact-info">
+      <span class="eyebrow reveal">Contact</span>
+      <h1 class="reveal">Parlons de <em>votre projet.</em></h1>
+      <p class="lead reveal">Trois canaux pour nous joindre. Nous répondons sous 24h ouvrées, souvent plus vite. Le devis est toujours gratuit, l'étude technique aussi.</p>
+
+      <div class="contact-channels">
+        <a href="tel:0658978288" class="channel reveal">
+          <div class="channel-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="channel-text">
+            <small>Téléphone</small>
+            <strong>06 58 97 82 88</strong>
+            <span>Du lundi au samedi · 8h-19h</span>
+          </div>
+        </a>
+
+        <a href="#" class="channel whatsapp reveal" data-whatsapp="Bonjour, je souhaite obtenir un devis pour mes fenêtres.">
+          <div class="channel-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+          </div>
+          <div class="channel-text">
+            <small>WhatsApp · Le plus rapide</small>
+            <strong>Discussion immédiate</strong>
+            <span>Photos, mesures, plans — partagez tout</span>
+          </div>
+        </a>
+
+        <a href="mailto:Artisantfenetrenord@gmail.com" class="channel reveal">
+          <div class="channel-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="channel-text">
+            <small>Email</small>
+            <strong>Artisantfenetrenord@gmail.com</strong>
+            <span>Réponse sous 24h ouvrées</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-meta reveal">
+        <div class="meta-item">
+          <small>Adresse</small>
+          <p>34 place du Général de Gaulle<br>Bureau 3, Lille 59000</p>
+        </div>
+        <div class="meta-item">
+          <small>Zone d'intervention</small>
+          <p>Lille · Tourcoing · Roubaix · Dunkerque · Valenciennes · Arras · Belgique</p>
+        </div>
+        <div class="meta-item">
+          <small>Suivez nos chantiers</small>
+          <div class="meta-socials">
+            <a href="https://www.instagram.com/artisant.fenetre.dunord/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span>@artisant.fenetre.dunord</span>
+            </a>
+            <a href="https://www.facebook.com/artisant.fenetre.dunord" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/></svg>
+              <span>artisant.fenetre.dunord</span>
+            </a>
+            <a href="https://www.snapchat.com/add/artisantfenetre" target="_blank" rel="noopener" aria-label="Snapchat">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.166 2c2.946-.005 5.92 1.81 6.85 4.785.339 1.087.222 2.244.213 3.38-.007.736.045 1.474 0 2.21.155.044.32.058.475.105.288.06.587.157.798.376.107.268-.029.555-.236.731-.555.503-1.32.677-1.973 1.022-.355.235-.499.659-.711 1.005-.163.275-.42.502-.748.523-.461.058-.913-.097-1.376-.107-.564-.007-1.137.137-1.561.523-.443.396-.751.918-1.232 1.281-.527.388-1.182.587-1.832.6-.871.06-1.717-.27-2.422-.752-.482-.34-.791-.87-1.286-1.193-.514-.305-1.139-.385-1.722-.305-.376.058-.764.182-1.143.087-.474-.114-.711-.604-.918-1.005-.207-.356-.337-.79-.692-1.024-.532-.303-1.142-.473-1.65-.819a1.32 1.32 0 0 1-.43-.464c-.106-.272.107-.557.366-.654.346-.155.74-.155 1.085-.319.376-.144.74-.376.972-.713.087-.146.155-.304.213-.464-.585-.27-1.21-.526-1.642-1.03-.27-.318-.388-.78-.193-1.165.116-.21.347-.318.575-.358.21-.04.405.04.59.135.183.087.376.184.585.193.118 0 .184-.117.193-.222.038-.434-.058-.87-.077-1.302-.06-.957-.155-1.95.184-2.876C5.41 4.04 7.787 2.434 10.295 2.097c.621-.087 1.247-.107 1.871-.097z"/></svg>
+              <span>artisantfenetre</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form column -->
+    <div class="contact-form-wrapper reveal">
+      <span class="eyebrow">Demande de devis</span>
+      <h2>Décrivez votre <em>projet.</em></h2>
+      <p>Quelques infos suffisent. On revient vers vous sous 24h avec un premier chiffrage et les options possibles.</p>
+
+      <div id="formSuccess">
+        <span>✓</span>
+        <span>Votre client mail s'est ouvert. Si rien ne se passe, contactez-nous directement par WhatsApp.</span>
+      </div>
+
+      <form id="contactForm" class="form-grid">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Nom complet *</label>
+            <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
+          </div>
+          <div class="field">
+            <label for="phone">Téléphone *</label>
+            <input type="tel" id="phone" name="phone" placeholder="06 12 34 56 78" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required />
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="project">Type de projet *</label>
+            <select id="project" name="project" required>
+              <option value="">Sélectionnez…</option>
+              <option>Fenêtres (rénovation)</option>
+              <option>Fenêtres (neuf)</option>
+              <option>Baie vitrée</option>
+              <option>Porte d'entrée</option>
+              <option>Porte de garage</option>
+              <option>Portail / Clôture</option>
+              <option>Projet complet (multi-postes)</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="material">Matériau souhaité</label>
+            <select id="material" name="material">
+              <option value="">Pas encore défini</option>
+              <option>PVC</option>
+              <option>Aluminium</option>
+              <option>Bois</option>
+              <option>Mixte / À définir</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Détails du projet</label>
+          <textarea id="message" name="message" placeholder="Nombre de fenêtres, dimensions approximatives, contraintes particulières, délai souhaité…"></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn-primary">
+            <span>Envoyer ma demande</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12m0 0L7 1m6 6L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button type="button" class="btn-ghost" data-whatsapp="Bonjour, je souhaite obtenir un devis pour mes fenêtres.">
+            <span>Préférer WhatsApp</span>
+          </button>
+        </div>
+
+        <p class="form-note">* Champs obligatoires. Vos données ne seront utilisées que pour vous répondre.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIEN FAQ ===== -->
+<section class="contact-faq-link">
+  <div class="contact-faq-link-inner">
+    <div>
+      <span class="eyebrow">Avant de nous écrire</span>
+      <h3>Une question simple ? La <em>réponse y est peut-être déjà.</em></h3>
+      <p>Devis, délais, aides MaPrimeRénov', garanties — les 15 questions les plus fréquentes sont regroupées sur la page FAQ.</p>
+    </div>
+    <a href="faq.html" class="btn-ghost"><span>Consulter la FAQ →</span></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Artisant Fenêtre <em>du Nord.</em></h3>
+        <p>Artisan local, fenêtres sur-mesure PVC · Aluminium · Bois. Hauts-de-France & Belgique.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/artisant.fenetre.dunord/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/artisant.fenetre.dunord" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/></svg>
+          </a>
+          <a href="https://www.snapchat.com/add/artisantfenetre" target="_blank" rel="noopener" aria-label="Snapchat">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.166 2c2.946-.005 5.92 1.81 6.85 4.785.339 1.087.222 2.244.213 3.38-.007.736.045 1.474 0 2.21.155.044.32.058.475.105.288.06.587.157.798.376.107.268-.029.555-.236.731-.555.503-1.32.677-1.973 1.022-.355.235-.499.659-.711 1.005-.163.275-.42.502-.748.523-.461.058-.913-.097-1.376-.107-.564-.007-1.137.137-1.561.523-.443.396-.751.918-1.232 1.281-.527.388-1.182.587-1.832.6-.871.06-1.717-.27-2.422-.752-.482-.34-.791-.87-1.286-1.193-.514-.305-1.139-.385-1.722-.305-.376.058-.764.182-1.143.087-.474-.114-.711-.604-.918-1.005-.207-.356-.337-.79-.692-1.024-.532-.303-1.142-.473-1.65-.819a1.32 1.32 0 0 1-.43-.464c-.106-.272.107-.557.366-.654.346-.155.74-.155 1.085-.319.376-.144.74-.376.972-.713.087-.146.155-.304.213-.464-.585-.27-1.21-.526-1.642-1.03-.27-.318-.388-.78-.193-1.165.116-.21.347-.318.575-.358.21-.04.405.04.59.135.183.087.376.184.585.193.118 0 .184-.117.193-.222.038-.434-.058-.87-.077-1.302-.06-.957-.155-1.95.184-2.876C5.41 4.04 7.787 2.434 10.295 2.097c.621-.087 1.247-.107 1.871-.097z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="pvc.html">Fenêtres PVC</a></li>
+          <li><a href="aluminium.html">Fenêtres Aluminium</a></li>
+          <li><a href="bois.html">Fenêtres Bois</a></li>
+          <li><a href="portes-baies-portails.html">Portes & Baies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Société</h4>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0658978288">06 58 97 82 88</a></li>
+          <li><a href="mailto:Artisantfenetrenord@gmail.com">Artisantfenetrenord@gmail.com</a></li>
+          <li><a href="#" data-whatsapp="Bonjour">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Artisant Fenêtre du Nord — Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" data-whatsapp="Bonjour, je souhaite obtenir un devis pour mes fenêtres." aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

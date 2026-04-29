@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Questions fréquentes (FAQ) | Artisant Fenêtre du Nord</title>
+<meta name="description" content="Toutes les réponses sur le devis, la pose, les matériaux, les aides MaPrimeRénov' et les garanties. Artisan fenêtres dans le Nord et en Belgique." />
+<link rel="canonical" href="https://artisantfenetredunord.fr/pages/faq.html" />
+<link rel="stylesheet" href="../assets/styles.css" />
+<link rel="icon" type="image/x-icon" href="../favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+<link rel="manifest" href="../manifest.json" />
+<meta name="theme-color" content="#0e0e0e" />
+
+<style>
+.faq-hero {
+  position: relative;
+  padding: 120px var(--gutter) 36px;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--paper) 100%);
+  overflow: hidden;
+}
+.faq-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(900px 500px at 80% 20%, rgba(212,162,76,0.12), transparent 60%);
+  pointer-events: none;
+}
+.faq-hero-inner {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+.faq-hero .breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.faq-hero .breadcrumb a { color: var(--ink-soft); transition: color 0.2s; }
+.faq-hero .breadcrumb a:hover { color: var(--ink); }
+.faq-hero .breadcrumb .sep { opacity: 0.4; }
+.faq-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  margin-bottom: 16px;
+}
+.faq-hero h1 em { font-style: italic; color: var(--ink-soft); }
+.faq-hero .lead {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.faq-cats {
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 92px;
+  z-index: 5;
+}
+.faq-cats-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 14px var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+.faq-cats a {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.faq-cats a:hover {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+
+.faq-section {
+  padding: 44px var(--gutter);
+  background: var(--cream);
+}
+.faq-section.alt { background: var(--paper); }
+.faq-section-inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.faq-section-head {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.faq-section-head .num {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--gold);
+}
+.faq-section-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.faq-list { display: flex; flex-direction: column; }
+.faq-item {
+  border-top: 1px solid var(--line);
+  padding: 18px 0;
+  cursor: pointer;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--line); }
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.faq-toggle {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--gold);
+  display: grid; place-items: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 700;
+}
+.faq-item.open .faq-toggle {
+  background: var(--gold);
+  color: var(--ink);
+  transform: rotate(45deg);
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding-top 0.3s ease;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.faq-item.open .faq-a {
+  max-height: 400px;
+  padding-top: 14px;
+}
+
+.faq-cta {
+  padding: 56px var(--gutter);
+  background: var(--ink);
+  color: var(--cream);
+  text-align: center;
+}
+.faq-cta-inner { max-width: 640px; margin: 0 auto; }
+.faq-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+.faq-cta h2 em { font-style: italic; color: var(--gold); }
+.faq-cta p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 28px;
+}
+.faq-cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.faq-cta .btn-primary { background: var(--gold); color: var(--ink); }
+.faq-cta .btn-primary::before { background: var(--cream); }
+.faq-cta .btn-ghost {
+  color: var(--cream);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.faq-cta .btn-ghost:hover {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+}
+
+.wa-float { position: fixed; bottom: 24px; right: 24px; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: grid; place-items: center; color: white; z-index: 50; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); transition: transform 0.25s; }
+.wa-float:hover { transform: scale(1.1); }
+@media (max-width: 600px) {
+  .wa-float { bottom: 16px; right: 16px; width: 56px; height: 56px; }
+  .faq-hero { padding: 100px var(--gutter) 28px; }
+  .faq-section { padding: 32px var(--gutter); }
+  .faq-cats { top: 80px; }
+  .faq-cats-inner { padding: 10px var(--gutter); }
+  .faq-cats a { font-size: 12px; padding: 6px 12px; }
+  .faq-q { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <img class="nav-brand-mark" src="../assets/logo.png" alt="Artisant Fenêtre du Nord" />
+      <span class="nav-brand-name">Artisant Fenêtre du Nord<span>Fenêtre sans surprise</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#produits">Produits</a></li>
+      <li><a href="pvc.html">PVC</a></li>
+      <li><a href="aluminium.html">Aluminium</a></li>
+      <li><a href="bois.html">Bois</a></li>
+      <li><a href="faq.html" style="color: var(--gold-deep);">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Devis gratuit <span>→</span></a>
+    <button class="nav-toggle" aria-label="Menu">
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none"><path d="M1 1h18M1 7h18M1 13h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="../index.html">Accueil</a>
+  <a href="pvc.html">Fenêtres PVC</a>
+  <a href="aluminium.html">Fenêtres Aluminium</a>
+  <a href="bois.html">Fenêtres Bois</a>
+  <a href="portes-baies-portails.html">Portes & Baies</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="mobile-cta">Demander un devis gratuit</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="faq-hero">
+  <div class="faq-hero-inner">
+    <div class="breadcrumb reveal">
+      <a href="../index.html">Accueil</a>
+      <span class="sep">/</span>
+      <span style="color: var(--ink);">FAQ</span>
+    </div>
+    <h1 class="reveal">Questions <em>fréquentes.</em></h1>
+    <p class="lead reveal">Tout ce qu'il faut savoir avant de lancer votre projet de fenêtres, portes ou baies vitrées. Une question manque ? Posez-la directement par WhatsApp ou téléphone — réponse en moins d'une heure.</p>
+  </div>
+</section>
+
+<!-- ===== CATÉGORIES (sticky) ===== -->
+<div class="faq-cats">
+  <div class="faq-cats-inner">
+    <a href="#devis">Devis &amp; tarifs</a>
+    <a href="#pose">Pose &amp; chantier</a>
+    <a href="#materiaux">Matériaux</a>
+    <a href="#aides">Aides &amp; financement</a>
+    <a href="#garanties">Garanties &amp; SAV</a>
+  </div>
+</div>
+
+<!-- ===== 1. DEVIS & TARIFS ===== -->
+<section class="faq-section" id="devis">
+  <div class="faq-section-inner">
+    <div class="faq-section-head reveal">
+      <span class="num">01</span>
+      <h2>Devis &amp; tarifs</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">Le devis est-il vraiment gratuit et sans engagement ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Oui, totalement. Le déplacement, la prise de mesures, l'étude technique et le chiffrage sont entièrement gratuits. Vous repartez avec un devis détaillé que vous pouvez comparer librement — aucun acompte n'est demandé tant que vous n'avez pas signé.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Combien coûte une fenêtre sur-mesure en moyenne ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Pour une fenêtre PVC double vitrage standard posée, comptez entre 550 € et 900 € TTC. Une fenêtre aluminium oscille plutôt entre 900 € et 1 600 € selon dimensions et finitions. Le bois reste plus haut de gamme. Chaque chantier est unique : seul le devis sur place est fiable.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">En combien de temps recevons-nous le devis ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Sous 24 à 48 heures ouvrées après le passage de notre technicien à votre domicile. Pour les projets simples (1 à 3 fenêtres), un devis indicatif est même possible par WhatsApp à partir de photos et dimensions approximatives.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Le prix peut-il évoluer après la signature ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Non. Une fois le devis signé, le prix est bloqué — c'est un engagement écrit. La seule exception : si vous demandez vous-même une modification (ajout de fenêtre, changement de matériau, option supplémentaire), un avenant sera proposé avant exécution.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. POSE & CHANTIER ===== -->
+<section class="faq-section alt" id="pose">
+  <div class="faq-section-inner">
+    <div class="faq-section-head reveal">
+      <span class="num">02</span>
+      <h2>Pose &amp; chantier</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">Combien de temps dure un chantier ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Pour 5 à 8 fenêtres en rénovation simple, comptez 2 à 3 jours. Un projet complet (fenêtres + baie vitrée + porte d'entrée) prend généralement une semaine. La date de pose est planifiée au moment de la signature et tenue à 95 %.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Comment se déroule la pose étape par étape ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Bâches sur sols et meubles, démontage propre de l'ancienne menuiserie, pose et calage de la neuve, étanchéité au mastic ou compriband, finitions intérieures (joints, plinthes), nettoyage complet. Nous laissons le chantier impeccable en fin de journée — c'est une règle non négociable.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Faut-il quitter le logement pendant les travaux ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Non, pas du tout. Vous pouvez rester chez vous : nous travaillons pièce par pièce et reposons systématiquement chaque ouverture le jour même. Vous n'aurez jamais une pièce sans fenêtre la nuit, sauf cas exceptionnel discuté à l'avance.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Que devient l'ancienne menuiserie ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Nous prenons en charge l'évacuation et le tri en déchèterie professionnelle (PVC, alu, bois et verre sont recyclés séparément). Aucun supplément n'est facturé pour cette prestation, c'est inclus dans le devis.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Travaillez-vous en neuf comme en rénovation ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Oui, les deux. En neuf, nous nous coordonnons avec votre maître d'œuvre. En rénovation, nous proposons la pose en applique, en feuillure ou en dépose totale selon l'état de votre bâti et vos contraintes esthétiques.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. MATÉRIAUX ===== -->
+<section class="faq-section" id="materiaux">
+  <div class="faq-section-inner">
+    <div class="faq-section-head reveal">
+      <span class="num">03</span>
+      <h2>Matériaux &amp; choix techniques</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">PVC, aluminium ou bois — comment choisir ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Le PVC est le meilleur rapport qualité/prix : isolation excellente, zéro entretien, idéal en rénovation classique. L'aluminium offre des profils ultra-fins pour de grandes baies et plus de 200 RAL au choix. Le bois reste irremplaçable en zone ABF ou pour le cachet authentique. Nous vous orientons selon votre bâti, votre budget et votre projet.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Quelle différence entre double et triple vitrage ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Le double vitrage standard (4/16/4 argon) suffit dans 90 % des cas et offre un excellent confort. Le triple vitrage est pertinent au-dessus du R+2, en zone très exposée au vent ou si vous visez le passif/BBC. Il améliore l'isolation thermique de ~20 % mais alourdit la fenêtre — l'écart de prix se justifie surtout dans le neuf très performant.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Peut-on personnaliser couleurs et finitions ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Oui, largement. PVC : plaxage bois, gris anthracite, blanc, noir et bicolore intérieur/extérieur. Aluminium : plus de 200 RAL en mat, satiné ou texturé. Bois : lasure ou peinture toutes teintes. Poignées, charnières et petits bois sont également au choix.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Vos menuiseries sont-elles compatibles ABF ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Oui. En zone classée ou aux Bâtiments de France, nous proposons du bois traditionnel ou des profils alu/PVC à imposte fine respectant les contraintes patrimoniales. Nous prenons en charge le dossier de déclaration préalable si besoin.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. AIDES & FINANCEMENT ===== -->
+<section class="faq-section alt" id="aides">
+  <div class="faq-section-inner">
+    <div class="faq-section-head reveal">
+      <span class="num">04</span>
+      <h2>Aides &amp; financement</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">À quelles aides puis-je prétendre ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Selon votre situation : MaPrimeRénov' (jusqu'à 100 €/fenêtre), CEE (Certificats d'Économies d'Énergie), éco-PTZ jusqu'à 30 000 €, TVA réduite à 5,5 % en rénovation énergétique, et des aides locales selon votre commune. Nous vérifions ensemble votre éligibilité au moment du devis.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Êtes-vous certifié RGE / éligible MaPrimeRénov' ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Oui, nous travaillons avec des partenaires certifiés RGE QualiBat, condition indispensable pour vous faire bénéficier de MaPrimeRénov' et des CEE. L'attestation est jointe au devis.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Proposez-vous un paiement échelonné ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Oui, le règlement se fait classiquement en trois temps : 30 % à la signature, 40 % au lancement de la commande usine, le solde à la fin de pose après vérification ensemble. Pour les chantiers importants, un financement bancaire (éco-PTZ ou crédit travaux) peut être étudié.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. GARANTIES & SAV ===== -->
+<section class="faq-section" id="garanties">
+  <div class="faq-section-inner">
+    <div class="faq-section-head reveal">
+      <span class="num">05</span>
+      <h2>Garanties &amp; SAV</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">Quelles garanties couvrent vos travaux ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Trois niveaux : garantie fabricant 10 ans sur la menuiserie (profilés, vitrage, ferrures), garantie biennale sur les éléments d'équipement (poignées, joints), et garantie décennale sur la pose. Un contrôle qualité gratuit est prévu 15 jours après le chantier.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Êtes-vous assurés ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Oui. Nous disposons d'une assurance professionnelle responsabilité civile et décennale couvrant l'ensemble de nos prestations sur la France et la Belgique. Les attestations à jour sont remises sur simple demande.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Et si un problème survient après la pose ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Nous nous déplaçons sous 48h ouvrées pour tout SAV, sans frais pendant la période de garantie. Au-delà, l'intervention reste tarifée au juste prix, sans surfacturation. Un contact direct (téléphone ou WhatsApp) reste accessible bien après la fin du chantier.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Travaillez-vous en Belgique ? <span class="faq-toggle">+</span></div>
+        <div class="faq-a">Oui, régulièrement. Nous intervenons sur tout le sud de la Flandre belge (Mouscron, Tournai, Courtrai, Ypres). La zone d'intervention couvre globalement Lille, Tourcoing, Roubaix, Dunkerque, Valenciennes, Arras et les communes belges frontalières.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="faq-cta">
+  <div class="faq-cta-inner">
+    <h2>Une autre question ? <em>On vous répond.</em></h2>
+    <p>WhatsApp pour les réponses rapides, téléphone pour les projets précis. Devis gratuit sous 24h.</p>
+    <div class="faq-cta-buttons">
+      <a href="#" data-whatsapp="Bonjour, j'ai une question concernant mon projet de menuiserie." class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Discuter sur WhatsApp</span>
+      </a>
+      <a href="contact.html" class="btn-ghost"><span>Demander un devis</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Artisant Fenêtre <em>du Nord.</em></h3>
+        <p>Artisan local, fenêtres sur-mesure PVC · Aluminium · Bois. Hauts-de-France & Belgique.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/artisant.fenetre.dunord/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/artisant.fenetre.dunord" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/></svg>
+          </a>
+          <a href="https://www.snapchat.com/add/artisantfenetre" target="_blank" rel="noopener" aria-label="Snapchat">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.166 2c2.946-.005 5.92 1.81 6.85 4.785.339 1.087.222 2.244.213 3.38-.007.736.045 1.474 0 2.21.155.044.32.058.475.105.288.06.587.157.798.376.107.268-.029.555-.236.731-.555.503-1.32.677-1.973 1.022-.355.235-.499.659-.711 1.005-.163.275-.42.502-.748.523-.461.058-.913-.097-1.376-.107-.564-.007-1.137.137-1.561.523-.443.396-.751.918-1.232 1.281-.527.388-1.182.587-1.832.6-.871.06-1.717-.27-2.422-.752-.482-.34-.791-.87-1.286-1.193-.514-.305-1.139-.385-1.722-.305-.376.058-.764.182-1.143.087-.474-.114-.711-.604-.918-1.005-.207-.356-.337-.79-.692-1.024-.532-.303-1.142-.473-1.65-.819a1.32 1.32 0 0 1-.43-.464c-.106-.272.107-.557.366-.654.346-.155.74-.155 1.085-.319.376-.144.74-.376.972-.713.087-.146.155-.304.213-.464-.585-.27-1.21-.526-1.642-1.03-.27-.318-.388-.78-.193-1.165.116-.21.347-.318.575-.358.21-.04.405.04.59.135.183.087.376.184.585.193.118 0 .184-.117.193-.222.038-.434-.058-.87-.077-1.302-.06-.957-.155-1.95.184-2.876C5.41 4.04 7.787 2.434 10.295 2.097c.621-.087 1.247-.107 1.871-.097z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="pvc.html">Fenêtres PVC</a></li>
+          <li><a href="aluminium.html">Fenêtres Aluminium</a></li>
+          <li><a href="bois.html">Fenêtres Bois</a></li>
+          <li><a href="portes-baies-portails.html">Portes & Baies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Société</h4>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0658978288">06 58 97 82 88</a></li>
+          <li><a href="mailto:Artisantfenetrenord@gmail.com">Artisantfenetrenord@gmail.com</a></li>
+          <li><a href="#" data-whatsapp="Bonjour">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Artisant Fenêtre du Nord — Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" data-whatsapp="Bonjour, j'ai une question concernant mon projet." aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="../assets/script.js"></script>
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o => o.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
